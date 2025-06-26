@@ -13,7 +13,11 @@ class Employee(models.Model):
     join_date = models.DateField()
     
 class LeaveModel(models.Model):
+<<<<<<< HEAD
     employee = models.ForeignKey(Employee, on_delete=models.CASCADE, db_column='employee')
+=======
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
+>>>>>>> 62506c085f34622a671ae78a64637786ee561545
     month = models.CharField(max_length=20)
     sl = models.IntegerField(default=0)  
     cl = models.IntegerField(default=0)  

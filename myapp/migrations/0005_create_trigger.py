@@ -7,7 +7,11 @@ CREATE TRIGGER create_leave_records
 AFTER INSERT ON myapp_employee
 FOR EACH ROW
 BEGIN
+<<<<<<< HEAD
   INSERT INTO myapp_leavemodel (employee, month, sl, cl)
+=======
+  INSERT INTO myapp_leavemodel (employee_id, month, sl, cl)
+>>>>>>> 62506c085f34622a671ae78a64637786ee561545
   VALUES 
     (NEW.id, 'January', 0, 0),
     (NEW.id, 'February', 0, 0),
