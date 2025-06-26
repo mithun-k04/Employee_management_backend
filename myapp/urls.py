@@ -8,4 +8,5 @@ router.register(r'employees', EmployeeViewSet, basename='employees')
 urlpatterns = [
     path('', include(router.urls)),
     path("hrlogin/", LoginHrclass.as_view(), name="hrlogin"),
+    path("addemployee/", AddEmployee.as_view(), name="addemployee"),
 ]
