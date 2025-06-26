@@ -11,3 +11,12 @@ class Employee(models.Model):
     department = models.CharField(max_length=100, blank=False)
     designation = models.CharField(max_length=100, blank=False)
     join_date = models.DateField()
+    
+class LeaveModel(models.Model):
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    month = models.CharField(max_length=20)
+    sl = models.IntegerField(default=0)  
+    cl = models.IntegerField(default=0)  
+
+    def __str__(self):
+        return f"{self.employee.name} - {self.month}"

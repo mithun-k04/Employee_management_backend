@@ -4,3 +4,4 @@ from .models import *
 
 admin.site.register(Hradmin)
 admin.site.register(Employee)
+admin.site.register(LeaveModel)
